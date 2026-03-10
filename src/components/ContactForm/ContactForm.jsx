@@ -1,105 +1,207 @@
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState } from "react";
+
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Reset form after submission
+    setIsSubmitted(true);
+    setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    setTimeout(() => setIsSubmitted(false), 3000);
+  };
+
   return (
-    <div className="isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-40rem)] sm:w-288.75"
-        />
-      </div>
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          Me contacter
-        </h2>
-        <p className="mt-2 text-lg/8 text-gray-400">
-          Au plaisir d'échanger avec vous. Merci d'avoir pris le temps de
-          visiter mon portfolio !
-        </p>
-      </div>
-      <form
-        action="#"
-        method="POST"
-        className="mx-auto mt-16 max-w-xl sm:mt-20">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
-            <label
-              htmlFor="first-name"
-              className="block text-sm/6 font-semibold text-white">
-              Prénom
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="first-name"
-                name="first-name"
-                type="text"
-                autoComplete="given-name"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
+    <section id="contact" className="min-h-screen bg-slate-900 px-6 py-20">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Parlons de votre projet
+          </h2>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            Vous avez une idée en tête ? Une question ? N'hésitez pas à me
+            contacter. Je serai ravi de discuter avec vous.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Contact Info */}
+          <div className="lg:col-span-1">
+            <div className="space-y-8">
+              {/* Email */}
+              <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-indigo-500 transition">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-indigo-500/20 rounded-lg">
+                    <Mail className="text-indigo-400" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-1">Email</h3>
+                    <p className="text-slate-300">votre.email@example.com</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-indigo-500 transition">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-indigo-500/20 rounded-lg">
+                    <Phone className="text-indigo-400" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-1">Téléphone</h3>
+                    <p className="text-slate-300">+33 (0) 6 XX XX XX XX</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-indigo-500 transition">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-indigo-500/20 rounded-lg">
+                    <MapPin className="text-indigo-400" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-1">
+                      Localisation
+                    </h3>
+                    <p className="text-slate-300">Votre ville, Votre région</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Response Time */}
+              <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-lg p-6 border border-indigo-500/30">
+                <p className="text-indigo-300 font-semibold mb-2">
+                  ⚡ Temps de réponse
+                </p>
+                <p className="text-slate-300">
+                  Je vous réponds généralement dans les 24 heures.
+                </p>
+              </div>
             </div>
           </div>
-          <div>
-            <label
-              htmlFor="last-name"
-              className="block text-sm/6 font-semibold text-white">
-              Nom
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="last-name"
-                name="last-name"
-                type="text"
-                autoComplete="family-name"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="email"
-              className="block text-sm/6 font-semibold text-white">
-              Email
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="message"
-              className="block text-sm/6 font-semibold text-white">
-              Message
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-                defaultValue={""}
-              />
-            </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-slate-800/50 backdrop-blur rounded-lg p-8 border border-slate-700 hover:border-indigo-500/50 transition">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {/* First Name */}
+                <div>
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-semibold text-white mb-2">
+                    Prénom
+                  </label>
+                  <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 border border-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition"
+                    placeholder="Vincent"
+                  />
+                </div>
+
+                {/* Last Name */}
+                <div>
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-semibold text-white mb-2">
+                    Nom
+                  </label>
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 border border-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition"
+                    placeholder="Maury"
+                  />
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="mb-6">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-white mb-2">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-lg bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 border border-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition"
+                  placeholder="votre.email@example.com"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="mb-6">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold text-white mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-lg bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 border border-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition resize-none"
+                  placeholder="Votre message ici..."
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full group bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                <Send size={20} />
+                Envoyer le message
+              </button>
+
+              {/* Success Message */}
+              {isSubmitted && (
+                <div className="mt-4 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                  <p className="text-green-300 font-semibold">
+                    ✓ Message envoyé avec succès ! Merci de m'avoir contacté.
+                  </p>
+                </div>
+              )}
+            </form>
           </div>
         </div>
-        <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-            Envoyer
-          </button>
-        </div>
-      </form>
-    </div>
+      </div>
+    </section>
   );
 }
 
