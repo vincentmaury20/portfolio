@@ -4,13 +4,13 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white px-4 pt-20">
+      className="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white px-4 pt-20">
       <div className="max-w-3xl mx-auto">
         {/* Content */}
         <div className="text-center md:text-left">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Développeur{" "}
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-br from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Web
             </span>{" "}
             créatif

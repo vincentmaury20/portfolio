@@ -87,7 +87,7 @@ function ContactForm() {
               </div>
 
               {/* Response Time */}
-              <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-lg p-6 border border-indigo-500/30">
+              <div className="bg-linear-to-br from-indigo-500/10 to-purple-500/10 rounded-lg p-6 border border-indigo-500/30">
                 <p className="text-indigo-300 font-semibold mb-2">
                   ⚡ Temps de réponse
                 </p>
@@ -184,7 +184,7 @@ function ContactForm() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full group bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                className="w-full group bg-linear-to-br from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
                 <Send size={20} />
                 Envoyer le message
               </button>

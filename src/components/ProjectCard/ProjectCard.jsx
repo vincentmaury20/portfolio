@@ -11,7 +11,7 @@ function ProjectCard({
   return (
     <div className="bg-slate-800 backdrop-blur rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 group border border-slate-700">
       {/* Image Container */}
-      <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-900 overflow-hidden">
+      <div className="relative h-48 bg-linear-to-br from-slate-700 to-slate-900 overflow-hidden">
         {imageUrl ? (
           <img
             src={imageUrl}
@@ -19,7 +19,7 @@ function ProjectCard({
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-indigo-500/20 to-purple-500/20">
+          <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-indigo-500/20 to-purple-500/20">
             <div className="text-center">
               <div className="text-4xl mb-2">💻</div>
               <p className="text-slate-400 text-sm">Image du projet</p>
