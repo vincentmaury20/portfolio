@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +12,9 @@ function Footer() {
           <div>
             <h3 className="text-xl font-bold text-white mb-2">Vincent Maury</h3>
             <p className="text-slate-300 text-sm">
-              Développeur web passionné par la création d'expériences modernes
-              et performantes.
+              Développeur web paré à construire des outils adaptés à vos
+              besoins, avec bienveillance et determination.{" "}
+              <Heart size={16} className="inline text-red-500" />
             </p>
           </div>
 
@@ -21,25 +23,25 @@ function Footer() {
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#hero"
+                <Link
+                  to="/"
                   className="text-slate-400 hover:text-indigo-400 transition">
                   Accueil
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#projects"
+                <Link
+                  to="/projects"
                   className="text-slate-400 hover:text-indigo-400 transition">
                   Projets
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="text-slate-400 hover:text-indigo-400 transition">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -49,20 +51,24 @@ function Footer() {
             <h4 className="text-white font-semibold mb-4">Réseaux sociaux</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://github.com/vincentmaury20"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-slate-800 hover:bg-indigo-500/50 rounded-lg transition border border-slate-700">
                 <Github size={20} className="text-slate-300" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/vincent-maury-lipro/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-slate-800 hover:bg-indigo-500/50 rounded-lg transition border border-slate-700">
                 <Linkedin size={20} className="text-slate-300" />
               </a>
-              <a
-                href="#"
+              <Link
+                to={`/Contact`}
                 className="p-2 bg-slate-800 hover:bg-indigo-500/50 rounded-lg transition border border-slate-700">
                 <Mail size={20} className="text-slate-300" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

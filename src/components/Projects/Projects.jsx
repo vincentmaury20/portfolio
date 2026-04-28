@@ -1,4 +1,5 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
+import { Link } from "react-router-dom";
 
 function Projects() {
   // Array de projets exemple - à remplacer par vos vrais projets
@@ -17,7 +18,7 @@ function Projects() {
         "EJS",
         "Back-office",
       ],
-      imageUrl: "/public/LogoBBB.png",
+      imageUrl: "/LogoBBB.png",
       liveUrl: null,
       githubUrl: null,
     },
@@ -36,7 +37,7 @@ function Projects() {
         "Sequelize",
         "API REST",
       ],
-      imageUrl: "/public/Title.png",
+      imageUrl: "/Title.png",
       liveUrl: null,
       githubUrl: null,
     },
@@ -46,18 +47,18 @@ function Projects() {
       description:
         "Une simple maquette totalement responsive, créée pour un client réel. Une réalisation faite en stage.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      imageUrl: "/public/backgroundForSection1.jpg",
+      imageUrl: "/backgroundForSection1.jpg",
       liveUrl: "https://elegant-gentleman.vercel.app/",
       githubUrl: null,
     },
   ];
 
   return (
-    <section id="projects" className="min-h-screen bg-slate-900 px-6 py-20">
+    <section id="projects" className="min-h-screen bg-slate-900 px-6 py-20 ">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 mt-4">
             Mes Projets
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
@@ -86,11 +87,11 @@ function Projects() {
           <p className="text-slate-300 mb-4">
             Vous avez des questions sur mes projets ?
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-block px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg transition">
             Me contacter
-          </a>
+          </Link>
         </div>
       </div>
     </section>
