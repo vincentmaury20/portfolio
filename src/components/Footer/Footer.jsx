@@ -70,17 +70,8 @@ function Footer() {
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row justify-between items-center text-slate-400 text-sm">
           <p className="flex items-center gap-1">
-            © {currentYear} Vincent Maury. Fait avec{" "}
-            <Heart size={16} className="text-indigo-500" /> en France.
+            © {currentYear} Vincent Maury
           </p>
-          <div className="flex gap-6 mt-4 sm:mt-0">
-            <a href="#" className="hover:text-indigo-400 transition">
-              Politique de confidentialité
-            </a>
-            <a href="#" className="hover:text-indigo-400 transition">
-              Mentions légales
-            </a>
-          </div>
         </div>
       </div>
     </footer>

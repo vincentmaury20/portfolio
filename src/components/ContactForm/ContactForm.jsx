@@ -42,64 +42,8 @@ function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Contact Info */}
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
-              {/* Email */}
-              <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-indigo-500 transition">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-indigo-500/20 rounded-lg">
-                    <Mail className="text-indigo-400" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Email</h3>
-                    <p className="text-slate-300">votre.email@example.com</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-indigo-500 transition">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-indigo-500/20 rounded-lg">
-                    <Phone className="text-indigo-400" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Téléphone</h3>
-                    <p className="text-slate-300">+33 (0) 6 XX XX XX XX</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Location */}
-              <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-indigo-500 transition">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-indigo-500/20 rounded-lg">
-                    <MapPin className="text-indigo-400" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">
-                      Localisation
-                    </h3>
-                    <p className="text-slate-300">Votre ville, Votre région</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Response Time */}
-              <div className="bg-linear-to-br from-indigo-500/10 to-purple-500/10 rounded-lg p-6 border border-indigo-500/30">
-                <p className="text-indigo-300 font-semibold mb-2">
-                  ⚡ Temps de réponse
-                </p>
-                <p className="text-slate-300">
-                  Je vous réponds généralement dans les 24 heures.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3 flex justify-center ">
             <form
               onSubmit={handleSubmit}
               className="bg-slate-800/50 backdrop-blur rounded-lg p-8 border border-slate-700 hover:border-indigo-500/50 transition">
@@ -177,7 +121,7 @@ function ContactForm() {
                   onChange={handleChange}
                   required
                   className="w-full rounded-lg bg-slate-700/50 px-4 py-3 text-white placeholder-slate-400 border border-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition resize-none"
-                  placeholder="Votre message ici..."
+                  placeholder="Votre message ..."
                 />
               </div>
 

@@ -13,14 +13,13 @@ function Hero() {
             <span className="bg-linear-to-br from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Web
             </span>{" "}
-            créatif
           </h1>
 
           <p className="text-xl text-slate-300 mb-8 leading-relaxed">
             Je suis Vincent MAURY. En 2025, j'ai décidé de laisser les couteaux
-            des cuisines pour me lancer dans le développement web. J'aime
-            résoudre des problèmes, apprendre en continu et surtout travailler
-            en équipe.
+            des cuisines, les banquets traiteur pour me lancer dans le
+            développement web. J'aime résoudre des problèmes, apprendre en
+            continu et surtout travailler en équipe.
           </p>
 
           {/* CTA Buttons */}

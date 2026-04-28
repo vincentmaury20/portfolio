@@ -5,32 +5,49 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Projet à venir",
+      title: "BlaBlaBook",
       description:
-        "Ajoutez vos projets ici. Chaque projet affichera une image, une description et les technologies utilisées.",
-      technologies: ["React", "Tailwind", "Vite"],
-      imageUrl: null,
+        "Gestion de bibliothèque en ligne BlaBlaBook, réalisé en équipe dans le cadre de la formation au titre DWWM.",
+      technologies: [
+        "Node.js",
+        "SvelteKit",
+        "PostgreSQL",
+        "Sequelize",
+        "API REST",
+        "EJS",
+        "Back-office",
+      ],
+      imageUrl: "/public/LogoBBB.png",
       liveUrl: null,
       githubUrl: null,
     },
     {
       id: 2,
-      title: "Projet à venir",
+      title: "Gamer Challenges",
       description:
-        "Cliquez sur les cartes pour voir plus de détails et accéder aux liens vers votre site et votre code.",
-      technologies: ["JavaScript", "CSS", "HTML"],
-      imageUrl: null,
+        "Réalisation en équipe. Plateforme web dédiée aux défis gaming, permettant aux joueurs de se challenger et de partager leurs performances.",
+      technologies: [
+        "React",
+        "Tailwind",
+        "Node.js",
+        "Express",
+        "Typescript",
+        "PostgreSQL",
+        "Sequelize",
+        "API REST",
+      ],
+      imageUrl: "/public/Title.png",
       liveUrl: null,
       githubUrl: null,
     },
     {
       id: 3,
-      title: "Projet à venir",
+      title: "ELEGANT GENTLEMEN",
       description:
-        "Les cartes sont entièrement responsives et s'adaptent à tous les appareils.",
-      technologies: ["Node.js", "Express", "MongoDB"],
-      imageUrl: null,
-      liveUrl: null,
+        "Une simple maquette totalement responsive, créée pour un client réel. Une réalisation faite en stage.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      imageUrl: "/public/backgroundForSection1.jpg",
+      liveUrl: "https://elegant-gentleman.vercel.app/",
       githubUrl: null,
     },
   ];
@@ -44,8 +61,8 @@ function Projects() {
             Mes Projets
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Découvrez mes réalisations et les technologies que j'utilise pour
-            créer des solutions web modernes et performantes.
+            Vous pouvez voir trois de mes projets, avec différentes technologies
+            et différentes manières de travailler.
           </p>
         </div>
 
