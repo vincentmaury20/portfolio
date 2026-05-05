@@ -34,7 +34,7 @@ function About() {
     hidden          /* caché sur mobile */
     md:block        /* visible à partir de md */
     w-56 sm:w-64 md:w-80 lg:w-96
-    aspect-[3/4]
+    aspect-3/4
     rounded-xl
     object-cover
     border-4 border-indigo-500

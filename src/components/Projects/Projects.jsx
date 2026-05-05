@@ -8,7 +8,7 @@ function Projects() {
       id: 1,
       title: "BlaBlaBook",
       description:
-        "Gestion de bibliothèque en ligne BlaBlaBook, réalisé en équipe dans le cadre de la formation au titre DWWM.",
+        "Gestion de bibliothèque en ligne BlaBlaBook, réalisé pendant la formation au titre DWWM.",
       technologies: [
         "Node.js",
         "SvelteKit",
@@ -17,16 +17,18 @@ function Projects() {
         "API REST",
         "EJS",
         "Back-office",
+        "Travail en équipe",
       ],
       imageUrl: "/LogoBBB.png",
-      liveUrl: null,
+      liveUrl:
+        "https://69fa6ad89dd96c81865240d2--splendorous-daffodil-a47e83.netlify.app/",
       githubUrl: null,
     },
     {
       id: 2,
       title: "Gamer Challenges",
       description:
-        "Réalisation en équipe. Plateforme web dédiée aux défis gaming, permettant aux joueurs de se challenger et de partager leurs performances.",
+        "Plateforme web dédiée aux défis gaming, challenges et partage des performances.",
       technologies: [
         "React",
         "Tailwind",
@@ -36,17 +38,25 @@ function Projects() {
         "PostgreSQL",
         "Sequelize",
         "API REST",
+        "Travail en équipe",
       ],
       imageUrl: "/Title.png",
-      liveUrl: null,
+      liveUrl: "https://gamerchallenges-frontend-hmda.vercel.app",
       githubUrl: null,
     },
     {
       id: 3,
       title: "ELEGANT GENTLEMEN",
       description:
-        "Une simple maquette totalement responsive, créée pour un client réel. Une réalisation faite en stage.",
-      technologies: ["HTML", "CSS", "JavaScript"],
+        "Une simple maquette totalement responsive. Une réalisation faite en stage.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Maquette",
+        "Responsive",
+        "Autonomie",
+      ],
       imageUrl: "/backgroundForSection1.jpg",
       liveUrl: "https://elegant-gentleman.vercel.app/",
       githubUrl: null,
