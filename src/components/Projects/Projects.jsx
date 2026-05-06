@@ -2,7 +2,6 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import { Link } from "react-router-dom";
 
 function Projects() {
-  // Array de projets exemple - à remplacer par vos vrais projets
   const projects = [
     {
       id: 1,
