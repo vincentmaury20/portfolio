@@ -94,9 +94,6 @@ function Projects() {
 
         {/* CTA */}
         <div className="text-center pt-8 border-t border-slate-700">
-          <p className="text-slate-300 mb-4">
-            Vous avez des questions sur mes projets ?
-          </p>
           <Link
             to="/contact"
             className="inline-block px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg transition">
