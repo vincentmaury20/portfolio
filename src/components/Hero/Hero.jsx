@@ -55,7 +55,7 @@ function Hero() {
           {/* Social Links */}
           <div className="flex gap-4 justify-center md:justify-start">
             <a
-              href="https://github.com/vincentmaury20"
+              href="https://github.com/vincentmaury20/vincentmaury20/blob/main/README.md"
               className="p-3 bg-slate-700/50 hover:bg-indigo-500/50 rounded-lg transition border border-slate-600">
               <Github size={24} />
             </a>

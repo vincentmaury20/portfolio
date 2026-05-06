@@ -51,7 +51,7 @@ function Footer() {
             <h4 className="text-white font-semibold mb-4">Réseaux sociaux</h4>
             <div className="flex gap-4">
               <a
-                href="https://github.com/vincentmaury20"
+                href="https://github.com/vincentmaury20/vincentmaury20/blob/main/README.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 hover:bg-indigo-500/50 rounded-lg transition border border-slate-700">
