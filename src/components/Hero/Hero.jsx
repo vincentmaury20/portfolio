@@ -45,7 +45,7 @@ function Hero() {
             </Link>
 
             <a
-              href="/CV-Vincent-Maury-(FR).pdf"
+              href="/CV-Dev-Vincent-Maury-(FR).pdf"
               download
               className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition">
               Télécharger mon CV
