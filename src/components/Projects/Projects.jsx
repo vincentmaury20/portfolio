@@ -1,5 +1,5 @@
-import ProjectCard from "../ProjectCard/ProjectCard";
 import { Link } from "react-router-dom";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
 function Projects() {
   const projects = [
@@ -20,7 +20,7 @@ function Projects() {
       ],
       imageUrl: "/LogoBBB.png",
       liveUrl:
-        "https://69fa6ad89dd96c81865240d2--splendorous-daffodil-a47e83.netlify.app/",
+        null, 
       githubUrl: null,
     },
     {
@@ -40,7 +40,7 @@ function Projects() {
         "Travail en équipe",
       ],
       imageUrl: "/Title.png",
-      liveUrl: "https://gamerchallenges-frontend-hmda.vercel.app",
+      liveUrl: null,
       githubUrl: null,
     },
     {

@@ -26,23 +26,31 @@ function ProjectCard({
             </div>
           </div>
         )}
+
         {/* Overlay on hover */}
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-          {liveUrl && (
+          {liveUrl ? (
             <a
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-indigo-500 hover:bg-indigo-600 text-white p-3 rounded-full transition">
+              className="bg-indigo-500 hover:bg-indigo-600 text-white p-3 rounded-full transition"
+            >
               <ExternalLink size={20} />
             </a>
+          ) : (
+            <span className="text-slate-300 text-sm italic bg-black/40 px-3 py-1 rounded-md">
+              Démo indisponible
+            </span>
           )}
+
           {githubUrl && (
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-full transition">
+              className="bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-full transition"
+            >
               <Github size={20} />
             </a>
           )}
@@ -62,7 +70,8 @@ function ProjectCard({
             technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-indigo-500/20 border border-indigo-500/50 text-indigo-300 text-xs rounded-full">
+                className="px-3 py-1 bg-indigo-500/20 border border-indigo-500/50 text-indigo-300 text-xs rounded-full"
+              >
                 {tech}
               </span>
             ))
@@ -75,21 +84,28 @@ function ProjectCard({
 
         {/* Links for mobile */}
         <div className="flex gap-3 md:hidden">
-          {liveUrl && (
+          {liveUrl ? (
             <a
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-2 rounded-md text-sm font-medium transition text-center">
+              className="flex-1 bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-2 rounded-md text-sm font-medium transition text-center"
+            >
               Visiter
             </a>
+          ) : (
+            <span className="flex-1 text-slate-400 italic text-center text-sm py-2">
+              Démo indisponible
+            </span>
           )}
+
           {githubUrl && (
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-md text-sm font-medium transition text-center">
+              className="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-md text-sm font-medium transition text-center"
+            >
               Code
             </a>
           )}
